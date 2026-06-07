@@ -41,7 +41,7 @@
   bottom: -12px;
 }
 
-.torta {
+.pastel {
   transform: scale(0.75);
   left: 15px;
   bottom: -20px;
@@ -95,7 +95,7 @@
     bottom: -16px;
   }
 
-  .torta {
+  .pastel {
     transform: scale(0.63);
     left: 17px;
     bottom: -27px;
