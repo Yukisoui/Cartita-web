@@ -25,7 +25,7 @@ llama.addEventListener("click", () => {
   soplido.currentTime = 0;
   soplido.play();
 
-  llama.style.animation = "apagar 0.5s forwards"; // forwards -> Ultimo frame (to)
+  llama.style.animation = "apagar 0.5s forwards"; 
 
   setTimeout(() => {
     cancion.currentTime = 0;
