@@ -1,12 +1,9 @@
 // Confetis
-
-//
-// 1. Configuracion inicial
 window.oncontextmenu = function () {
   return false;
 };
 
-const canvasConfeti = document.getElementById("canvas1"); //Lienzo
+const canvasConfeti = document.getElementById("canvas1");
 const ctxConfeti = canvasConfeti.getContext("2d"); // Funciones
 
 let ancho = (canvasConfeti.width = window.innerWidth);
@@ -24,60 +21,52 @@ const coloresConfeti = [
   "rgba(255, 255, 255, 1)",
 ];
 
-//
-// 2. Crear confeti
-//
 function crearConfeti() {
   const cantidad = 100;
   for (let i = 0; i < cantidad; i++) {
     confetis.push({
-      x: Math.random() * ancho, // Posicion horizontal aleatoria
-      y: Math.random() * -alto, // Posición vertical aleatoria (Desde arriba por el negativo)
-      r: Math.random() * 5 + 2, // Radio aleatorio (2 y 7 Pixeles)
+      x: Math.random() * ancho,
+      y: Math.random() * -alto, 
+      r: Math.random() * 5 + 2, 
       color: coloresConfeti[Math.floor(Math.random() * coloresConfeti.length)],
-      velocidadY: Math.random() * 2 + 1, // Velocidad aleatoria (1 y 3 pixeles/frame)
+      velocidadY: Math.random() * 2 + 1, 
     });
   }
 }
 
-//
-// 3. Dibujar y mover confeti
-//
 function animarConfeti() {
-  ctxConfeti.fillStyle = "rgba(255, 182, 193, 1)"; // Fondo rosa pastel
+  ctxConfeti.fillStyle = "rgba(255, 182, 193, 1)"; 
   ctxConfeti.fillRect(0, 0, ancho, alto);
 
   for (let i = 0; i < confetis.length; i++) {
     let confetiActual = confetis[i];
 
-    ctxConfeti.beginPath(); // Empezamos una nueva figura
+    ctxConfeti.beginPath(); 
     ctxConfeti.arc(
       confetiActual.x,
       confetiActual.y,
       confetiActual.r,
       0,
       Math.PI * 2
-    ); // Dibujar circulo
-    ctxConfeti.fillStyle = confetiActual.color; // Color
-    ctxConfeti.fill(); // Rellenamos el circulo
-
-    // Movimiento
+    ); 
+    ctxConfeti.fillStyle = confetiActual.color;
+    ctxConfeti.fill();
+    
     confetiActual.y += confetiActual.velocidadY;
 
-    // Si termina de caer, aparece arriba otra vez
+
     if (confetiActual.y > alto) {
       confetiActual.y = -10;
       confetiActual.x = Math.random() * ancho;
     }
   }
 
-  // Animacion continua (bucle)
+
   requestAnimationFrame(animarConfeti);
 }
 
 crearConfeti();
 
-// Esperar 1 segundo antes de iniciar el confeti
 setTimeout(() => {
   animarConfeti();
 }, 1500);
