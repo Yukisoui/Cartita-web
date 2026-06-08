@@ -3,7 +3,7 @@ window.oncontextmenu = function () {
 };
 
 const canvasConfeti = document.getElementById("canvas1");
-const ctxConfeti = canvasConfeti.getContext("2d"); // Funciones
+const ctxConfeti = canvasConfeti.getContext("2d");
 
 let ancho = (canvasConfeti.width = window.innerWidth);
 let alto = (canvasConfeti.height = window.innerHeight);
