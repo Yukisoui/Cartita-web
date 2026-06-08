@@ -1,14 +1,13 @@
-/*Evitamos el Resaltado Azul de los Moviles*/
 * {
   -webkit-tap-highlight-color: transparent;
   outline: none;
-  user-select: none;         /* Evita seleccionar texto al tocar */
-  -webkit-user-select: none; /* Para Safari/iOS */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;    
 }
 
-/* Mesa */
+
 .soporte {
   width: 370px;
   left: -6px;
@@ -28,13 +27,13 @@
   left: 85px;
 }
 
-/*Mensaje*/
+
 .happy-birthday {
   top: -100%;
   left: 120px;
 }
 
-/*objetos de la mesa*/
+
 .portaretrato {
   transform: scale(0.75);
   left: 65px;
@@ -65,13 +64,13 @@
 }
 
 .carta {
-  animation: none; /* Evitar mini zoom */
+  animation: none; 
   transform: scale(0.8);
   transform-origin: center center;
-  margin: 0 auto; /* Centrar horizontalmente */
+  margin: 0 auto; 
 }
 
-/* Nuevo media query para pantallas más pequeñas */
+
 @media only screen and (max-width: 400px) {
 
   .soporte {
