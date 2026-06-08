@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-/*Confeti atras*/
+
 #canvas1 {
   position: absolute; 
   top: 0;
@@ -20,14 +20,14 @@ body {
   z-index: 0;
 }
 
-/*Ajustamos para dejarlo en caida [contendor  de los objetos / mesa]*/
+
 .contenedor {
   display: flex;
   flex-direction: column; 
   align-items: center;    
 }
 
-/* Portaretrato + torta + caja de regalo */
+
 .portaretrato-pastel-caja {
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ body {
   bottom: -50px;
 }
 
-/* Mesa */
+
 .soporte {
   position: relative;
   width: 500px;
@@ -71,7 +71,7 @@ body {
   box-shadow: 125px 0 rgba(255, 182, 193, 1);
 }
 
-/*PortaRetrato*/
+
 .portaretrato {
   position: relative;
   display: flex;
@@ -105,11 +105,11 @@ body {
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
 }
 
-/*Pastel de cumpleaños*/
+
 .pastel-cumpleaños {
   position: relative;
-  width: 274px;  /* mismo ancho que la torta */
-  height: 180px; /* espacio para torta + vela + llama */
+  width: 274px;  
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -121,8 +121,8 @@ body {
   width: 274px;
   height: 140px;
   background-color: #FDE8C8;
-  bottom: 0; /* pegada abajo del contenedor */
-  left: 0; /* centrada horizontalmente */
+  bottom: 0; 
+  left: 0; 
   border-radius: 30px 30px 0 0;
 }
 
@@ -165,8 +165,8 @@ body {
   width: 15px;
   height: 70px;
   background-color: white;
-  bottom: 140px; /* encima de la torta */
-  left: calc(50% - 7.5px); /* centrada */
+  bottom: 140px; 
+  left: calc(50% - 7.5px); 
   box-shadow: inset 0 -10px #FF6F61;
 }
 
@@ -192,7 +192,7 @@ body {
 
 .llama {
   position: absolute;
-  bottom: 210px; /* encima de la vela */
+  bottom: 210px;
   left: calc(50% - 10px);
   width: 20px;
   height: 30px;
@@ -220,7 +220,7 @@ body {
   }
 }
 
-/*Todo Oscuro*/
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -241,21 +241,21 @@ body {
 
 .caja-wrapper {
   transform: scale(0.75);
-  transform-origin: center bottom; /* para que se reduzca hacia el centro y desde la base */
+  transform-origin: center bottom; 
 }
 
-/*Regalo de cumpleaños*/
+
 .caja {
   position: relative;
   left: -20px;      
-  width: 150px; /* ancho del objeto */
-  height: 180px; /* alto total (caja + cinta + estrellas)*/
+  width: 150px; 
+  height: 180px; 
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-/* Elementos de la caja */
+
 .cinta-de-regalo,
 .cinta-de-regalo-izquierda,
 .cinta-de-regalo-derecha,
@@ -267,7 +267,7 @@ body {
 }
 
 .cinta-de-regalo {
-  bottom: 100px; /* ajustado para que quede encima */
+  bottom: 100px; 
   left: calc(50% - 17px);
   width: 34px;
   height: 23px;
@@ -321,7 +321,7 @@ body {
   clip-path: polygon(0 12%, 100% 42%, 100% 100%, 0 100%);
 }
 
-/* Base de la caja */
+
 .regalos {
   animation: base 1.5s ease-in-out infinite;
   background: linear-gradient(#fe3f3f, #fe3f3f) 50% 50% / 32px 100% no-repeat, #e9e3e3;
@@ -355,7 +355,7 @@ body {
   border-radius: 10px;
 }
 
-/* Estrellas animadas */
+
 .icono-estrella {
   position: absolute;
   background-color: #fcff50;
@@ -368,7 +368,7 @@ body {
 .estrella4 { animation: estrella2 1.5s ease-in-out infinite; bottom: 5px;  left: 20px;  width: 28px; height: 28px; }
 .estrella5 { animation: estrella2 1.5s ease-in-out infinite; animation-delay: calc(1.5s * 0.375); top: 20px;   left: 20px;  width: 20px; height: 20px; }
 
-/*Animaciones del regalo*/
+
 @keyframes cinta {
   from,
   50% {
@@ -488,10 +488,10 @@ body {
   }
 }
 
-/*Mensaje*/
+
 .happy-birthday {
     position: absolute;
-    top: -180px; /* Ajusta la distancia vertical desde el pastelinho */
+    top: -180px; 
     left: 20%;
     transform: translateX(-50%);
     font-family: 'Pacifico', cursive;
@@ -503,7 +503,7 @@ body {
                brillo 1.5s infinite;
 }
 
-/* Modal */
+
 .modal-carta {
   position: fixed;
   inset: 0;
@@ -522,7 +522,7 @@ body {
   pointer-events: auto;
 }
 
-/*Carta*/
+
 .carta {
   background: linear-gradient(135deg, #ffeeee, #fbd5e4);
   padding: 32px;
@@ -557,7 +557,7 @@ body {
   color: #323232;
 }
 
-/* Animación de entrada */
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -569,7 +569,7 @@ body {
   }
 }
 
-/* Animación flotante */
+
 @keyframes flotar {
     from, to {
         transform: translate(0, 0);
