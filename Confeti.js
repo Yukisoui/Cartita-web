@@ -1,4 +1,3 @@
-// Confetis
 window.oncontextmenu = function () {
   return false;
 };
