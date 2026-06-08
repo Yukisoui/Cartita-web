@@ -1,4 +1,4 @@
-// Carta
+
 const regalo = document.querySelector(".regalo");
 const regalos = document.querySelector(".regalos");
 const modalCarta = document.getElementById("modalCarta");
@@ -15,7 +15,7 @@ modalCarta.addEventListener("click", () => {
   modalCarta.classList.remove("activo");
 });
 
-// Todo oscuro + soplido + cancion
+
 const overlay = document.querySelector(".overlay");
 const soplido = document.getElementById("soplido");
 const cancion = document.getElementById("cancion");
